@@ -1,72 +1,97 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Innovation Finance Hub",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#0F766E",
+    "light": "#14B8A6",
+    "dark": "#2DD4BF"
   },
-  "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
+    "languages": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+        "language": "ar",
+        "groups": [
+          {
+            "group": "اكتشف البوابة",
+            "pages": [
+              "ar/index",
+              "ar/about",
+              "ar/solutions"
+            ]
+          },
+          {
+            "group": "الشركات الناشئة والشراكات",
+            "pages": [
+              "ar/startups",
+              "ar/islamic-finance",
+              "ar/partnerships"
+            ]
+          },
+          {
+            "group": "البوابة التقنية",
+            "pages": [
+              "ar/guides/integration",
+              "ar/guides/ai"
+            ]
+          },
+          {
+            "group": "ابدأ معنا",
+            "pages": [
+              "ar/contact"
+            ]
+          }
+        ],
+        "navbar": {
+          "primary": {
+            "type": "button",
+            "label": "ابدأ مشروعك",
+            "href": "/ar/contact"
+          }
         }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
+      },
       {
-        "label": "Support",
-        "href": "mailto:support@mintlify.com"
+        "language": "en",
+        "groups": [
+          {
+            "group": "Explore",
+            "pages": [
+              "en/index",
+              "en/about",
+              "en/solutions"
+            ]
+          },
+          {
+            "group": "Startups and partnerships",
+            "pages": [
+              "en/startups",
+              "en/islamic-finance",
+              "en/partnerships"
+            ]
+          },
+          {
+            "group": "Technical guides",
+            "pages": [
+              "en/guides/integration",
+              "en/guides/ai"
+            ]
+          },
+          {
+            "group": "Get started",
+            "pages": [
+              "en/contact"
+            ]
+          }
+        ],
+        "navbar": {
+          "primary": {
+            "type": "button",
+            "label": "Start your project",
+            "href": "/en/contact"
+          }
+        }
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
     ]
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
-  }
+  "favicon": "/portal-assets/favicon.svg"
 }
