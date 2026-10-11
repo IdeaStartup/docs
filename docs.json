@@ -47,7 +47,13 @@
             "type": "button",
             "label": "ابدأ مشروعك",
             "href": "/ar/contact"
-          }
+          },
+          "links": [
+            {
+              "label": "راسلنا",
+              "href": "mailto:osak9887@gmail.com"
+            }
+          ]
         }
       },
       {
@@ -88,7 +94,13 @@
             "type": "button",
             "label": "Start your project",
             "href": "/en/contact"
-          }
+          },
+          "links": [
+            {
+              "label": "Email us",
+              "href": "mailto:osak9887@gmail.com"
+            }
+          ]
         }
       }
     ]

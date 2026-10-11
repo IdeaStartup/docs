@@ -1,6 +1,6 @@
 # Innovation Finance Hub — Mintlify portal
 
-Working title pending company-name confirmation. Arabic and English fintech, AI and startup content with planning guides.
+Company name confirmed by the owner: Innovation Finance Hub. Contact: osak9887@gmail.com. Arabic and English fintech, AI and startup content with planning guides.
 
 See [setup instructions](PORTAL_SETUP.md).
 
@@ -14,4 +14,4 @@ Merge the reviewed feature branch into the branch linked in Mintlify. Verify the
 
 ## Publication checklist
 
-Confirm company identity, service capability and contact channel. Review actual data handling and legal pages before activating enquiry collection. No approved vendor partnership is claimed.
+Company name and email are confirmed. Review service capability and test email links. Review actual data handling and legal pages before activating enquiry collection. No approved vendor partnership is claimed.

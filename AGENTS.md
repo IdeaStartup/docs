@@ -1,7 +1,7 @@
 # Documentation project instructions
 
 ## Project
-Mintlify introductory and technical portal for fintech, AI and startup services in the UAE. Innovation Finance Hub is a working name pending confirmation. Content is in Arabic and English; configuration is docs.json.
+Mintlify introductory and technical portal for fintech, AI and startup services in the UAE. The owner confirmed the company name Innovation Finance Hub and contact email osak9887@gmail.com. Content is in Arabic and English; configuration is docs.json.
 
 ## Style
 Use concise active language and specific deliverables. Keep both languages aligned. Arabic pages use appropriate right-to-left text; code examples remain left-to-right.
