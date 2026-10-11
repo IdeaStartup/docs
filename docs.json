@@ -29,6 +29,12 @@
             ]
           },
           {
+            "group": "مساعد الأعمال",
+            "pages": [
+              "ar/business-copilot"
+            ]
+          },
+          {
             "group": "البوابة التقنية",
             "pages": [
               "ar/guides/integration",
@@ -73,6 +79,12 @@
               "en/startups",
               "en/islamic-finance",
               "en/partnerships"
+            ]
+          },
+          {
+            "group": "Business Copilot",
+            "pages": [
+              "en/business-copilot"
             ]
           },
           {

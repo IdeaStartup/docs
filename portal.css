@@ -101,3 +101,24 @@
 
 /* A vertical infographic replaces the horizontal journey on small screens. */
 @media(max-width:520px){.ifh-infographic{overflow:hidden}.ifh-infographic img{width:100%;min-width:0;max-width:100%;aspect-ratio:540/820}.ifh-infographic figcaption{position:static}}
+
+/* Business workspace feature: scopes remain inside the custom landing. */
+.ifh-landing .ifh-copilot{margin-top:56px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:32px;border-radius:28px;background:linear-gradient(135deg,#102c30,#173f40);color:#eaf5ef}
+.ifh-landing .ifh-copilot h2{font-size:clamp(30px,4vw,48px);line-height:1.3;color:#eaf5ef;margin:12px 0}
+.ifh-landing .ifh-copilot .ifh-kicker{color:#a5ecd7}
+.ifh-landing .ifh-copilot-intro{line-height:1.9;color:#d0e3dc;margin-bottom:24px}
+.ifh-landing .ifh-copilot-status{font-size:12px;line-height:1.9;color:#c3d8d1;margin-top:18px}
+.ifh-landing .ifh-copilot-report{padding:28px;background:#f3faf6;border-radius:20px;color:#102c30;box-shadow:0 16px 40px #0002}
+.ifh-landing .ifh-copilot-report h3{font-size:22px;color:#102c30;margin:18px 0}
+.ifh-landing .ifh-copilot-label{font-size:12px;color:#0f766e}
+.ifh-landing .ifh-copilot-report ol{padding-inline-start:24px;list-style:decimal}
+.ifh-landing .ifh-copilot-report li{font-size:14px;line-height:1.8;padding:8px 0;border-bottom:1px solid #d6e6df}
+.ifh-landing .ifh-copilot-tasks{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ifh-landing .ifh-copilot-task{display:block;padding:20px;border:1px solid #527675;border-radius:16px;background:#ffffff08}
+.ifh-landing .ifh-copilot-task:hover{background:#ffffff12}
+.ifh-landing .ifh-copilot-task span{font-size:12px;color:#a5ecd7;display:block;margin-bottom:12px}
+.ifh-landing .ifh-copilot-task strong{font-size:16px;color:#eaf5ef}
+.ifh-landing .ifh-copilot-task p{font-size:13px;line-height:1.8;color:#c3d8d1;margin-top:10px}
+@media(max-width:900px){.ifh-landing .ifh-copilot-tasks{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.ifh-landing .ifh-copilot{grid-template-columns:1fr;padding:24px;gap:24px}.ifh-landing .ifh-copilot-report{padding:22px}}
+@media(max-width:520px){.ifh-landing .ifh-copilot-tasks{grid-template-columns:1fr}}
