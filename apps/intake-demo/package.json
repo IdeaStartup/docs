@@ -1,0 +1,19 @@
+{
+  "name": "ifh-intake-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --local",
+    "test": "node --test tests/*.test.js",
+    "check": "wrangler deploy --dry-run --outdir .build",
+    "deploy": "wrangler deploy",
+    "test:runtime": "npm run check && node --test tests/runtime.js"
+  },
+  "dependencies": {
+    "agents": "0.28.0"
+  },
+  "devDependencies": {
+    "miniflare": "5.20261006.1-alpha",
+    "wrangler": "4.149.0"
+  }
+}
