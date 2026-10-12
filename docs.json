@@ -4,8 +4,8 @@
   "name": "Innovation Finance Hub",
   "colors": {
     "primary": "#0F766E",
-    "light": "#14B8A6",
-    "dark": "#2DD4BF"
+    "light": "#5EEAD4",
+    "dark": "#0F766E"
   },
   "navigation": {
     "languages": [
@@ -17,7 +17,8 @@
             "pages": [
               "ar/index",
               "ar/about",
-              "ar/solutions"
+              "ar/solutions",
+              "ar/business-model"
             ]
           },
           {
@@ -26,6 +27,13 @@
               "ar/startups",
               "ar/islamic-finance",
               "ar/partnerships"
+            ]
+          },
+          {
+            "group": "مساعد الأعمال",
+            "pages": [
+              "ar/business-copilot",
+              "ar/platform"
             ]
           },
           {
@@ -64,7 +72,8 @@
             "pages": [
               "en/index",
               "en/about",
-              "en/solutions"
+              "en/solutions",
+              "en/business-model"
             ]
           },
           {
@@ -73,6 +82,13 @@
               "en/startups",
               "en/islamic-finance",
               "en/partnerships"
+            ]
+          },
+          {
+            "group": "Business Copilot",
+            "pages": [
+              "en/business-copilot",
+              "en/platform"
             ]
           },
           {
@@ -105,5 +121,6 @@
       }
     ]
   },
-  "favicon": "/portal-assets/favicon.svg"
+  "favicon": "/portal-assets/favicon.svg",
+  "logo": "/portal-assets/logo.png"
 }

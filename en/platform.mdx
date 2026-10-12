@@ -1,0 +1,51 @@
+---
+title: "From knowledge to service execution"
+sidebarTitle: "Platform architecture"
+description: "Mintlify, Cloudflare and institutional systems: roles and integration status"
+---
+
+<div dir="ltr" lang="en">
+
+## A phased proposed architecture
+
+| Component | Proposed role | Project status |
+| --- | --- | --- |
+| Mintlify | Website, guides and content assistant when activated | Portal published; assistant operation unverified |
+| Cloudflare Workers | Application and integration APIs | Planned; no operational application deployed |
+| Cloudflare Agents | Application context, interaction and tool calls | Planned |
+| Workflows | Follow-up, staff approval and resumed steps | Planned |
+| Database and document storage | Institutional files, statuses and audit events | Access and retention design required |
+| Existing institutional system | Receive files and return references and statuses | Interface assessment and agreement required |
+| Mambu | Potential core integration for an institution that uses it | Under evaluation; no partnership or integration |
+
+## Application flow
+
+1. Validate inputs and access permissions.
+2. Index documents and check completeness against approved requirements.
+3. Present a brief with the source of each observation and uncertainty flags.
+4. Staff review outputs and approve a follow-up draft or handoff.
+5. Log actions and timing; receive status updates where integration permits.
+
+Document presence does not establish authenticity. Completeness checks are separate from authenticity verification, assessment and final decisions.
+
+## Integration options
+
+Begin with structured file delivery through an approved channel, then APIs or secure file exchange where available. The initial connection is usually to application management or CRM. No application is sent to a financial provider without an agreement and configured consent and access controls.
+
+## Before operation
+
+Implement independent institutional and user access, private storage, server-side secrets, duplicate prevention, failure handling and audit events. Agree retention, deletion, hosting and data handling requirements with the customer. These are implementation requirements, not verified controls in the current portal.
+
+## Provider resources
+
+- [Cloudflare Workers](https://developers.cloudflare.com/workers/): applications and integration APIs.
+- [Cloudflare Agents](https://developers.cloudflare.com/agents/): persistent-context assistants.
+- [Cloudflare Workflows](https://developers.cloudflare.com/workflows/): multi-step execution and approvals.
+- [Mintlify Assistant](https://www.mintlify.com/docs/assistant): published-content assistance.
+- [Mambu API](https://docs.mambu.com/docs/mambu-apis/): core integration reference.
+
+A free Cloudflare plan does not make the application, models and storage cost-free. Mintlify Startups and Mambu Partners acceptance is unconfirmed and is not a customer promise.
+
+[Business model](/en/business-model) · [Integration guide](/en/guides/integration)
+
+</div>
