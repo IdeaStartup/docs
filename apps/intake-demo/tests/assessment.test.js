@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {assess,transition} from '../src/assessment.js';
+test('complete sample is review-ready, not admitted',()=>{const r=assess('complete');assert.equal(r.complete,true);assert.equal(r.findings.length,3);assert.match(r.draft,/لا يعني قبول/);});
+test('missing plan produces an evidence-backed missing item',()=>{const r=assess('missing');assert.equal(r.complete,false);assert.equal(r.findings.filter(f=>f.status==='missing')[0].id,'plan');assert.match(r.draft,/خطة عمل/);});
+test('conflicting company name is not treated as complete',()=>{const r=assess('conflict');assert.equal(r.findings.find(f=>f.id==='plan').status,'conflict');assert.equal(r.complete,false);});
+test('prototype or unknown input cannot select a fixture',()=>{for(const k of ['__proto__','constructor','real-client'])assert.throws(()=>assess(k));});
+test('review is idempotent and cannot silently reverse a decision',()=>{const initial={...assess('missing'),status:'awaiting_review',events:[]};const reviewed=transition(initial,'approve');assert.equal(reviewed.status,'approved_demo');assert.equal(reviewed.events.length,1);assert.strictEqual(transition(reviewed,'approve'),reviewed);assert.throws(()=>transition(reviewed,'reject'));assert.throws(()=>transition(null,'approve'));});
