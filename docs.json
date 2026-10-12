@@ -17,7 +17,8 @@
             "pages": [
               "ar/index",
               "ar/about",
-              "ar/solutions"
+              "ar/solutions",
+              "ar/business-model"
             ]
           },
           {
@@ -31,7 +32,8 @@
           {
             "group": "مساعد الأعمال",
             "pages": [
-              "ar/business-copilot"
+              "ar/business-copilot",
+              "ar/platform"
             ]
           },
           {
@@ -70,7 +72,8 @@
             "pages": [
               "en/index",
               "en/about",
-              "en/solutions"
+              "en/solutions",
+              "en/business-model"
             ]
           },
           {
@@ -84,7 +87,8 @@
           {
             "group": "Business Copilot",
             "pages": [
-              "en/business-copilot"
+              "en/business-copilot",
+              "en/platform"
             ]
           },
           {
