@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {Miniflare,convertV4MiniflareOptions} from 'miniflare';import {mkdtemp,rm} from 'node:fs/promises';import {tmpdir} from 'node:os';import {join} from 'node:path';
+test('Durable Object serializes AI admission and persists counters after restart',async()=>{
+ const dir=await mkdtemp(join(tmpdir(),'ifh-ai-budget-'));const config=()=>convertV4MiniflareOptions({name:'ifh-ai-budget-test',modules:[{type:'ESModule',path:'tests/budget-worker.js'},{type:'ESModule',path:'.build/worker.js'}],compatibilityDate:'2026-10-12',compatibilityFlags:['nodejs_compat'],durableObjects:{INTAKE_AGENT:{className:'IntakeAgent',useSQLite:true}},resourcePersistencePath:dir,host:'127.0.0.1',port:0});let mf=new Miniflare(config());
+ try{const replies=await Promise.all(Array.from({length:10},()=>mf.dispatchFetch('http://localhost/').then(r=>r.json())));assert.equal(replies.filter(Boolean).length,1);await mf.dispose();mf=new Miniflare(config());assert.equal(await (await mf.dispatchFetch('http://localhost/')).json(),false);}finally{await mf.dispose();await rm(dir,{recursive:true,force:true});}
+});

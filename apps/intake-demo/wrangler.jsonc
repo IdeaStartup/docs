@@ -29,7 +29,9 @@
       ]
     }
   ],
+  "ai": {"binding":"AI"},
   "previews": {
+    "ai": {"binding":"AI"},
     "durable_objects": {
       "bindings": [
         {

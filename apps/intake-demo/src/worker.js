@@ -1,3 +1,4 @@
+import {handleStartupAi,nextUsage} from './startup-ai.js';
 import {Agent, getAgentByName} from 'agents';
 import {assess,scenarios,transition} from './assessment.js';
 const headers={'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'};
@@ -10,6 +11,7 @@ export class IntakeAgent extends Agent {
   const record={...assess(scenario),status:'awaiting_review',createdAt:now,events:[{at:now,type:'synthetic_assessment_created'}]};
   this.setState({record});return record;
  }
+ reserveStartupAi(){const usage=nextUsage(this.state.aiUsage,Date.now());if(!usage)return false;this.setState({...this.state,aiUsage:usage});return true;}
  async read(){return this.state.record;}
  async review(action){const record=transition(this.state.record,action);this.setState({record});return record;}
 }
@@ -19,6 +21,7 @@ export default {
   if(!url.pathname.startsWith('/api/'))return env.ASSETS.fetch(request);
   if(request.method==='POST'&&request.headers.get('Origin')!==url.origin)return json({error:'Same-origin request required'},403);
   try{
+   if(url.pathname==='/api/startup-ai')return handleStartupAi(request,env,async()=>{const budget=await getAgentByName(env.INTAKE_AGENT,'startup-ai-budget-v1');return budget.reserveStartupAi();});
    if(url.pathname==='/api/scenarios'&&request.method==='GET')return json({scenarios:Object.entries(scenarios).map(([id,s])=>({id,label:s.label})),mode:'synthetic-rules-demo'});
    if(url.pathname==='/api/runs'&&request.method==='POST'){
     const raw=await request.text();if(raw.length>512)return json({error:'Input too large'},413);
