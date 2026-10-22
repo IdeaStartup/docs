@@ -25,6 +25,7 @@
             "group": "الشركات الناشئة والشراكات",
             "pages": [
               "ar/startups",
+              "ar/ecosystem",
               "ar/islamic-finance",
               "ar/partnerships"
             ]
@@ -80,6 +81,7 @@
             "group": "Startups and partnerships",
             "pages": [
               "en/startups",
+              "en/ecosystem",
               "en/islamic-finance",
               "en/partnerships"
             ]
