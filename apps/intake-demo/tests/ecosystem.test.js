@@ -29,6 +29,10 @@ test('source import preserves 200 distinct records, contact coverage and unresol
     }
   }
   assert.equal(records.filter(r => r.historicalRound).length, 52);
+  // Regression: namesake search results must not become these companies' profile evidence.
+  for (const [id, host] of [['S001','www.alaan.com'], ['S013','www.revibe.ae'], ['S023','watermelon.market'], ['S026','widebot.ai'], ['S034','net0.com']]) {
+    assert.equal(new URL(records.find(r => r.id === id).sources.profile[0]).hostname, host);
+  }
   const workbook = await readFile(new URL('../public/data/UAE_Startups_Funders_200_AR.xlsx', import.meta.url));
   assert.equal(createHash('sha256').update(workbook).digest('hex'), directory.sourceWorkbookSha256);
 });
